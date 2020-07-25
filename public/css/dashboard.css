@@ -1,0 +1,237 @@
+:root{
+  --main-color:#EBEBEB;
+  --menu-color:#354341;
+  --color-user:#3498DB;
+  --color-user2:#35D0DB;
+  --menu-item-hover:rgba(35, 43, 41, .25);
+  --targeta-color:#FFFFFF;
+  --texto-blanco:#FFFFFF;
+  --texto-negro:#000000;
+}
+
+body {
+  font-family: Nunito;
+  font-size: .875rem;
+  background-color: var(--main-color);
+}
+
+.feather {
+  font-size: 25px;
+  color: #999;
+}
+
+/*
+ * Sidebar
+ */
+
+ .sidebar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100; /* Behind the navbar */
+  padding: 48px 0 0; /* Height of navbar */
+  box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+}
+
+.sidebar-sticky {
+  position: relative;
+  top: 0;
+  height: calc(100vh - 48px);
+  padding-top: .4rem;
+  overflow-x: hidden;
+  overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+  background-color: var(--menu-color);
+}
+
+@supports ((position: -webkit-sticky) or (position: sticky)) {
+  .sidebar-sticky {
+    position: -webkit-sticky;
+    position: sticky;
+  }
+}
+
+.sidebar-content{
+  height: 100%;
+  width: 100%;
+}
+.pie-cont{
+  color: #FFF;
+}
+
+.pie-cont .icons{
+  font-size: 20px;
+}
+
+.pie-cont .copy i{
+  font-size: 12px;
+}
+
+.sidebar .nav-link {
+  font-weight: 30px;
+  color: var(--texto-blanco);
+  border-radius: 5px;
+  margin: 2px 10px 2px 10px;
+  font-size: 15px;
+}
+
+.sidebar .nav-link:hover{
+  background-color: var(--menu-item-hover);
+}
+
+.sidebar .nav-link .menu-align{
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+}
+
+.sidebar .nav-link .menu-align .icono{
+  display: flex;
+  justify-content: center;
+  width: 30px;
+  margin-right: 8px;
+}
+
+.sidebar .nav-link.active {
+  color: var(--texto-blanco);
+  background-color: var(--color-user);
+  /*background-color: #007bff;*/
+}
+
+.sidebar .nav-link:hover .feather,
+.sidebar .nav-link.active .feather {
+  color: inherit;
+}
+
+.sidebar-heading {
+  font-size: .75rem;
+  text-transform: uppercase;
+}
+
+.accordion-card{
+  border-radius: 0px;
+  background-color: var(--menu-color);
+  border-width: 2px;
+  border-color: var(--color-user);
+  /*padding-bottom: 10px;*/
+}
+
+.accordion-card .card-head-per{
+  padding: 0 0 0 0;
+}
+
+.accordion-card .card-header .btn-accordion{
+  color: var(--texto-blanco);
+}
+
+.accordion-card .card-body-per{
+  padding: 0 0 0 0;
+}
+
+.accordion-card .card-head-per  .icon{
+  padding: 0 10px 0 0;
+}
+/*
+ * Content
+ */
+
+ [role="main"] {
+  padding-top: 48px; /* Space for fixed navbar */
+  /*margin-top: 70px;*/
+  /*background-color: #FF0000;*/
+  /*height: calc(100vh);*/
+}
+
+
+/*
+ * Navbar
+ */
+ .navbar {
+  /*background-color:rgba(0, 0, 0, .25);*/
+  background-color: var(--color-user);
+  /*background-color: #3598dc;*/
+  
+  /*background-image: linear-gradient(45deg, var(--color-user), var(--color-user2));*/
+}
+
+.navbar-brand {
+  padding-top: .75rem;
+  padding-bottom: .75rem;
+  font-size: 1.2rem;
+  /*background-color: #007bff;*/
+  /*box-shadow: inset -1px 0 0 rgba(0, 0, 0, .25);*/
+
+}
+
+.navbar .navbar-nav .nav-link{
+  color: var(--texto-blanco);
+}
+
+.navbar-brand .namecomp{
+  margin: 0px 8px 0px 8px;
+}
+
+.navbar .form-control {
+  padding: .75rem 1rem;
+  border-width: 0;
+  border-radius: 0;
+}
+
+.form-control-dark {
+  color: var(texto-blanco);
+  background-color: rgba(255, 255, 255, .1);
+  border-color: rgba(255, 255, 255, .1);
+}
+
+.form-control-dark:focus {
+  border-color: transparent;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, .25);
+}
+
+.modal .custom-select option{
+  background-color: #FFF;
+}
+
+.exa{
+  padding: 5px;
+}
+
+.FechaExamen{
+  border: solid;
+  border-color: var(--color-user);
+  border-width: 1px;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.modal .form-control, .custom-select{
+  border: transparent;
+  box-shadow: none !important;
+  background-color: var(--main-color);
+}
+
+.modal .form-control:hover, .custom-select:hover{
+  background-color: #e2e2e2;
+}
+
+.modal .form-control:focus, .custom-select:focus{
+  /*background-color: #D3D3D3;*/
+  border: solid;
+  border-width: 2px;
+  border-color: var(--color-user);
+}
+
+.modal .btn{
+  color: #FFF;
+}
+
+.container .card .card-body .form-group .form-control{
+  border:transparent;
+  box-shadow: none !important;
+  background-color: var(--main-color);
+}
+
+.container .card .card-body .form-group .form-control:focus{
+  background-color: #e2e2e2;
+}
+
